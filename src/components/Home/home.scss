@@ -1,0 +1,84 @@
+@use '../../scss/partial/variable' as *;
+
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  margin: 80px auto;
+  max-width: 1200px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  &__cardInfo {
+    width: 50%;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__cardJoin {
+    width: 50%;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 5px;
+    h2 {
+      padding: 20px;
+    }
+  }
+}
+
+.icon-container {
+  width: 200px;
+  height: 100%;
+  .AQRU-icon {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  .btn {
+    padding: 10px 0;
+    margin: 0 20px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid $Gray;
+    cursor: pointer;
+    &:hover {
+      background-color: $Gray;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.tradingContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  &__table {
+    width: 50%;
+    //span {
+    //  padding: 5px;
+    //  border: 1px solid $Gray;
+    //}
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
