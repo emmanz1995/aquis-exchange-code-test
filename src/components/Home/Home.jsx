@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Navbar from "../Navbar/Navbar";
 import './home.scss';
 import Medium from '../../assets/medium.svg';
-import { stockData } from '../../Data';
+import { data } from '../../Data';
 
 const Home = () => {
-    const [data, setData] = useState([])
+    const [stockData, setStockData] = useState([])
     useEffect(() => {
-        setData(stockData)
+        setStockData(stockData)
     }, [])
+
     return (
         <div className="home">
             <Navbar />
@@ -22,7 +23,7 @@ const Home = () => {
                             <h2>Medium Stock</h2>
                         </span>
                         <span >
-                            <p>AQSE Growth Market</p>
+                            <p>Medium Growth Market</p>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px'}}>
                                 <p>67.89</p> <p>+1.5%</p>
                             </div>
@@ -34,24 +35,28 @@ const Home = () => {
                     <div className="button-container">
                         <button className="btn">Buy</button>
                         <button className="btn">Sell</button>
+                    </div><br />
+                    <div className="add-container">
+                        <button className="add-btn">Add Portfolio</button>
                     </div>
                     <div className="icon-container"></div>
                 </div>
             </div>
             <div className="tradingContainer">
-                <table className="tradingContainer__table">
-                    <tr>
-                        {data?.map(stock => (
-                            <tr>
-                                <td>
-                                    <span>
-                                        {stock.code}
-                                    </span>
-                                </td>
-                            </tr>
-                        ))}
-                    </tr>
-                </table>
+                <h1>Portfolio</h1>
+                <div style={{ display: 'flex', gap: '15px' }} className="tradingContainer__card__container">
+                    {data?.stockData?.map(stock => (
+                        <div className="tradingContainer__card" key={stock?.id}>
+                            <div className="card-header">
+                                <h5>{stock.code}</h5>
+                                <p>{stock?.price}</p>
+                            </div><br/>
+                            <div className="card-body">
+                                <p>{stock.name}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
                 <div className="tradingContainer__graph"></div>
             </div>
         </div>

@@ -1,5 +1,7 @@
+@use '../../scss/partial/variable' as *;
+@use '../../scss/partial/mixins' as *;
+
 .navbar {
-  //padding: 10px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,5 +25,34 @@
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+  }
+}
+
+.logo-container {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.hamburger-container {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+@include mobile() {
+  .navbar {
+    &__ul {
+      display: none;
+    }
+  }
+  .hamburger-container {
+    display: block;
   }
 }

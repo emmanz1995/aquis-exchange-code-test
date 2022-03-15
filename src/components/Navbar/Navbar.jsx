@@ -1,5 +1,7 @@
 import React from 'react';
 import './navbar.scss';
+import AquisLogo from '../../assets/logo.svg';
+import Hamburger from '../../assets/icons/hamburger-menu.svg';
 
 const Navbar = () => {
     const navItems = [
@@ -37,7 +39,12 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar__wrapper">
-                <h2>Aquis Exchange</h2>
+                <div className="logo-container">
+                    <img src={AquisLogo} alt="" width="600" height="400" className="logo" />
+                </div>
+                <div className="hamburger-container">
+                    <img src={Hamburger} alt="" className="logo"/>
+                </div>
                 <ul className="navbar__ul">
                     {navItems.map(nav => (
                         <>
