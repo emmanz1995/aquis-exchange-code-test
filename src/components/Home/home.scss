@@ -4,7 +4,7 @@
 .cardContainer {
   width: 100%;
   height: 100%;
-  margin: 80px auto;
+  margin: 70px auto;
   max-width: 1200px;
   display: flex;
   gap: 30px;
@@ -33,6 +33,8 @@
 .icon-container {
   width: 200px;
   height: 100%;
+  display: flex;
+  align-items: center;
   .AQRU-icon {
     width: 100%;
     height: auto;
@@ -104,11 +106,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      p {
+        text-transform: uppercase;
+      }
       h5 {
         padding: 5px;
         background-color: #000;
         color: $Gray;
         border-radius: 3px;
+      }
+    }
+    .card-body {
+      p {
+        text-transform: uppercase;
       }
     }
   }
@@ -118,6 +128,9 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  &__title {
+    text-transform: uppercase;
+  }
   &__input {
     padding: 7px;
     border: 1px solid $Gray;

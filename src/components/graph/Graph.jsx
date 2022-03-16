@@ -9,7 +9,7 @@ export const options = {
     plugins: {
         title: {
             display: true,
-            text: 'Amazon Stock sales from 2018 till date',
+            text: 'AQRU PLC stock sales from 2018 till date',
         },
     },
 }
@@ -21,10 +21,12 @@ const Graph = () => {
             {
                 label: "Stock Up",
                 data: graphData.map((data) => data.stockUp),
+                borderColor: 'green'
             },
             {
                 label: "Stock Down",
-                data: graphData.map((data) => data.stockDown)
+                data: graphData.map((data) => data.stockDown),
+                borderColor: 'red'
             }
         ]
     })

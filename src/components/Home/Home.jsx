@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from "../Navbar/Navbar";
+import Navbar from '../Navbar/Navbar';
 import './home.scss';
-import Medium from '../../assets/medium.svg';
+import Medium from '../../assets/AXS+Logo_4C_72.png';
 import { data } from '../../Data';
-import Graph from "../graph/Graph";
+import Graph from '../graph/Graph';
 import Menu from '../Menu/Menu';
+import About from '../About/About';
 
 const Home = () => {
     const [stockData, setStockData] = useState([])
@@ -40,10 +41,10 @@ const Home = () => {
                     </div>
                     <div className="info">
                         <span>
-                            <h2>Medium Stock</h2>
+                            <h2>AQRU PLC</h2>
                         </span>
                         <span >
-                            <p>Medium Growth Market</p>
+                            <p>AQSE Growth Market</p>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px'}}>
                                 <p>67.89</p> <p>+1.5%</p>
                             </div>
@@ -64,7 +65,7 @@ const Home = () => {
             </div>
             <div className="tradingContainer">
                 <div className="search">
-                    <h1>Portfolio</h1>
+                    <h1 className="search__title">Portfolio</h1>
                     <form className="search__form">
                         <input type="search" name="search" placeholder="Search Portfolio" className="search__input" value={searchStock} onChange={filterStock} />
                     </form>
@@ -104,6 +105,9 @@ const Home = () => {
             </div>
             <div className="graphContainer">
                 <Graph />
+            </div>
+            <div>
+                <About />
             </div>
         </div>
     )

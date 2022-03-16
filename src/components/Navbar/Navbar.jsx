@@ -38,17 +38,7 @@ const Navbar = ({ revealMenu }) => {
             id: 4,
             name: "Investors",
             link: "/"
-        },
-        {
-            id: 5,
-            name: "Login",
-            link: "/"
-        },
-        {
-            id: 6,
-            name: "Register",
-            link: "/"
-        },
+        }
     ]
     return (
         <div className={`navbar ${revealNav && 'darkNav'}`}>

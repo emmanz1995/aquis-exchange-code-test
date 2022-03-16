@@ -1,0 +1,20 @@
+@use '../../scss/partial/variable' as *;
+@use '../../scss/partial/mixins' as *;
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+  //align-items: center;
+  &__image__container {
+    width: 50%;
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  &__info {
+    width: 50%;
+  }
+}
