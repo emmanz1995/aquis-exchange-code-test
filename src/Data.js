@@ -1,4 +1,3 @@
-import { faker } from '@faker-js/faker';
 export const data = {
     id: 1,
     stockData: [

@@ -4,12 +4,16 @@ import './home.scss';
 import Medium from '../../assets/medium.svg';
 import { data } from '../../Data';
 import Graph from "../graph/Graph";
+import Menu from '../Menu/Menu';
 
 const Home = () => {
     const [stockData, setStockData] = useState([])
     const [searchStock, setSearchStock] = useState('')
+    const [showMenu, setShowMenu] = useState(false);
+    const revealMenu = () => setShowMenu(true);
+    const hideMenu = () => setShowMenu(false);
     useEffect(() => {
-        setStockData(data)
+        setStockData(data);
     }, [])
 
     const filterStock = (evt) => {
@@ -27,7 +31,8 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Navbar />
+            <Navbar revealMenu={revealMenu} />
+            {showMenu && <Menu hideMenu={hideMenu} />}
             <div className="cardContainer">
                 <div className="cardContainer__cardInfo">
                     <div className="icon-container">
