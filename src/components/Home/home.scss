@@ -84,10 +84,12 @@
   margin: 0 auto;
   &__card__container {
     display: flex;
-    gap: 15px;
+    //gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   &__card {
-    width: 100%;
+    width: 30%;
     height: 100%;
     border: 1px solid $Gray;
     padding: 10px;
@@ -113,6 +115,23 @@
   }
 }
 
+.search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  &__input {
+    padding: 7px;
+    border: 1px solid $Gray;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+.graphContainer {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
 @include mobile() {
   .cardContainer {
     display: flex;
@@ -125,10 +144,11 @@
     }
   }
   .tradingContainer {
-    &__card__container {
-      overflow-x: auto;
-      &::-webkit-scrollbar {
-        display: none;
+    .search {
+      display: flex;
+      flex-direction: column;
+      &__input {
+        width: 100%;
       }
     }
   }

@@ -3,12 +3,27 @@ import Navbar from "../Navbar/Navbar";
 import './home.scss';
 import Medium from '../../assets/medium.svg';
 import { data } from '../../Data';
+import Graph from "../graph/Graph";
 
 const Home = () => {
     const [stockData, setStockData] = useState([])
+    const [searchStock, setSearchStock] = useState('')
     useEffect(() => {
-        setStockData(stockData)
+        setStockData(data)
     }, [])
+
+    const filterStock = (evt) => {
+        const keyword = evt.target.value
+        setSearchStock(keyword)
+    }
+
+    const stocks = stockData?.stockData?.filter((stock) => {
+        if(searchStock == null)
+            return stock
+        else if(stock?.name?.toLowerCase().includes(searchStock.toLowerCase()) || stock?.name?.toLowerCase().includes(searchStock.toLowerCase())) {
+            return stock;
+        }
+    })
 
     return (
         <div className="home">
@@ -43,21 +58,47 @@ const Home = () => {
                 </div>
             </div>
             <div className="tradingContainer">
-                <h1>Portfolio</h1>
-                <div style={{ display: 'flex', gap: '15px' }} className="tradingContainer__card__container">
-                    {data?.stockData?.map(stock => (
-                        <div className="tradingContainer__card" key={stock?.id}>
-                            <div className="card-header">
-                                <h5>{stock.code}</h5>
-                                <p>{stock?.price}</p>
-                            </div><br/>
-                            <div className="card-body">
-                                <p>{stock.name}</p>
-                            </div>
-                        </div>
-                    ))}
+                <div className="search">
+                    <h1>Portfolio</h1>
+                    <form className="search__form">
+                        <input type="search" name="search" placeholder="Search Portfolio" className="search__input" value={searchStock} onChange={filterStock} />
+                    </form>
                 </div>
-                <div className="tradingContainer__graph"></div>
+                <hr />
+                <div style={{ display: 'flex', gap: '15px' }} className="tradingContainer__card__container">
+                    {stocks ? (
+                        <>
+                            {stocks.map(stock => (
+                                <div className="tradingContainer__card" key={stock?.id}>
+                                    <div className="card-header">
+                                        <h5>{stock.code}</h5>
+                                        <p>{stock?.price}</p>
+                                    </div><br/>
+                                    <div className="card-body">
+                                        <p>{stock.name}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </>
+                    ) : (
+                        <>
+                            {stockData?.stockData?.map(stock => (
+                                <div className="tradingContainer__card" key={stock?.id}>
+                                    <div className="card-header">
+                                        <h5>{stock.code}</h5>
+                                        <p>{stock?.price}</p>
+                                    </div><br/>
+                                    <div className="card-body">
+                                        <p>{stock.name}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </>
+                    )}
+                </div>
+            </div>
+            <div className="graphContainer">
+                <Graph />
             </div>
         </div>
     )
