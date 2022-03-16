@@ -1,0 +1,39 @@
+@use '../../scss/partial/variable' as *;
+@use '../../scss/partial/mixins' as *;
+
+.blog {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+
+.post {
+  max-width: 1200px;
+  margin: 70px auto;
+  &__imageContainer {
+    width: 100%;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__body {
+    text-align: justify;
+  }
+}
+.post-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@include mobile() {
+  .blog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

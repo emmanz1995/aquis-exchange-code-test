@@ -3,16 +3,14 @@ import Navbar from '../Navbar/Navbar';
 import './home.scss';
 import Medium from '../../assets/AXS+Logo_4C_72.png';
 import { data } from '../../Data';
-import Graph from '../graph/Graph';
+import Graph from '../Graph/Graph';
 import Menu from '../Menu/Menu';
 import About from '../About/About';
+import Blog from "../Blog/Blog";
 
 const Home = () => {
     const [stockData, setStockData] = useState([])
     const [searchStock, setSearchStock] = useState('')
-    const [showMenu, setShowMenu] = useState(false);
-    const revealMenu = () => setShowMenu(true);
-    const hideMenu = () => setShowMenu(false);
     useEffect(() => {
         setStockData(data);
     }, [])
@@ -32,8 +30,8 @@ const Home = () => {
 
     return (
         <div className="home">
-            <Navbar revealMenu={revealMenu} />
-            {showMenu && <Menu hideMenu={hideMenu} />}
+            {/*<Navbar revealMenu={revealMenu} />*/}
+            {/*{showMenu && <Menu hideMenu={hideMenu} />}*/}
             <div className="cardContainer">
                 <div className="cardContainer__cardInfo">
                     <div className="icon-container">
@@ -106,8 +104,11 @@ const Home = () => {
             <div className="graphContainer">
                 <Graph />
             </div>
-            <div>
+            <div id="about">
                 <About />
+            </div>
+            <div>
+                <Blog />
             </div>
         </div>
     )

@@ -3,8 +3,10 @@ import './navbar.scss';
 import AquisLogo from '../../assets/logo.svg';
 import AquisLogoLight from '../../assets/logoLight.svg';
 import Hamburger from '../../assets/icons/hamburger-menu.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({ revealMenu }) => {
+    const navigate = useNavigate();
     const [revealNav, setRevealNav] = useState(false);
     const navTransition = () => {
         if(window.scrollY > 50) {
@@ -22,7 +24,7 @@ const Navbar = ({ revealMenu }) => {
         {
             id: 1,
             name: "About",
-            link: "/"
+            link: "#about"
         },
         {
             id: 2,
@@ -41,10 +43,10 @@ const Navbar = ({ revealMenu }) => {
         }
     ]
     return (
-        <div className={`navbar ${revealNav && 'darkNav'}`}>
+        <div className={`navbar ${revealNav && 'navTransition'}`}>
             <div className="navbar__wrapper">
                 <div className="logo-container">
-                    {!revealNav ? <img src={AquisLogo} alt="" width="600" height="400" className="logo" /> : <img src={AquisLogoLight} alt="" width="600" height="400" className="logo" />}
+                    {!revealNav ? <img src={AquisLogo} alt="" width="600" height="400" className="logo" onClick={() => navigate('/')} /> : <img src={AquisLogoLight} alt="" width="600" height="400" className="logo" onClick={() => navigate('/')} />}
                 </div>
                 <div className="hamburger-container">
                     <img src={Hamburger} alt="" className="logo" onClick={revealMenu} />
@@ -52,7 +54,7 @@ const Navbar = ({ revealMenu }) => {
                 <ul className="navbar__ul">
                     {navItems.map(nav => (
                         <>
-                            <li><a href="">{nav?.name}</a></li>
+                            <li><a href={nav?.link}>{nav?.name}</a></li>
                         </>
                     ))}
                 </ul>

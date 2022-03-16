@@ -1,0 +1,36 @@
+@use '../../../scss/partial/variable' as *;
+@use '../../../scss/partial/mixins' as *;
+
+
+.postCard {
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid $Gray;
+  &__header {
+    width: 100%;
+    .postCard__image {
+      width: 100%;
+    }
+  }
+  &__body {
+    padding: 10px;
+  }
+}
+
+.btn-more {
+  padding: 5px 15px;
+  border: 1px solid $Gray;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: $Gray;
+  }
+}
+
+@include mobile() {
+  .postCard {
+    width: 100%;
+    padding: 10px;
+  }
+}

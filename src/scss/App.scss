@@ -1,5 +1,5 @@
 @use '../scss/partial/variable' as *;
-@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Luxurious+Roman&family=Playfair+Display&family=Poppins&family=Roboto+Condensed&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,5 +14,5 @@ body {
 p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
-  font-family: 'League Gothic', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
