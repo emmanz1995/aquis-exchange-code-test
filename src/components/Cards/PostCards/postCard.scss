@@ -3,9 +3,13 @@
 
 
 .postCard {
-  width: 40%;
+  width: 30%;
   border-radius: 5px;
-  border: 1px solid $Gray;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: transform 300ms ease-in;
+  &:hover {
+    transform: translateY(-10px);
+  }
   &__header {
     width: 100%;
     .postCard__image {
@@ -14,6 +18,9 @@
   }
   &__body {
     padding: 10px;
+    p, h3 {
+      color: $Dark;
+    }
   }
 }
 
@@ -22,6 +29,7 @@
   border: 2px solid $Dark;
   border-radius: 5px;
   cursor: pointer;
+  color: $Dark;
   &:hover {
     transition: all 0.2s ease-in-out;
     background-color: $Dark;

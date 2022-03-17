@@ -1,4 +1,7 @@
 import PostImage from './assets/london_city-1000x640.jpeg';
+import StockExchange from './assets/pexels-stock-exchange.jpg';
+import StockExchange2 from './assets/pexels-ivan-babydov-7788009.jpg';
+import StockExchange3 from './assets/pexels-jose-francisco-fernandez-saura-802024.jpg';
 
 export const data = {
     id: 1,
@@ -90,7 +93,7 @@ export const blogPosts = [
         content4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam blanditiis eveniet ipsa porro! Aliquam aliquid aut consequuntur explicabo fugiat natus, neque nihil nulla, pariatur perferendis quisquam totam vitae! Aperiam cumque dolores harum id illum, iste labore laudantium minima neque nulla perferendis perspiciatis quis tempore voluptatem voluptatibus? Quis, sed, ullam. Aliquam architecto at atque beatae corporis cum cumque dicta distinctio dolor dolores dolorum ducimus eos eum illum itaque libero magnam nam necessitatibus, nihil non numquam obcaecati omnis placeat provident quae quaerat quod recusandae reiciendis rerum sit tempora veniam voluptate voluptatibus. Accusantium asperiores aspernatur cum deserunt dignissimos distinctio dolore dolores ex fugiat laboriosam maiores maxime natus nemo nisi omnis pariatur quidem, quos repudiandae suscipit tempore. Architecto asperiores, consequuntur expedita ipsa laudantium magnam minus molestias placeat quae quam quasi repellat similique tempore unde velit. Ad alias animi blanditiis consequuntur culpa cumque debitis delectus dolores eligendi et eveniet explicabo facilis fugiat ipsam itaque labore, laborum, laudantium magnam maiores maxime minus modi nesciunt nisi nostrum perspiciatis quae qui quo quod repellat repudiandae rerum sequi sint sit sunt ullam voluptas voluptate? Commodi dignissimos fugit nam officia provident sequi, sint. Ad dicta ea eum laudantium nihil pariatur quas suscipit ut? Adipisci fuga ipsa odio perferendis temporibus.',
         preview: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque doloribus enim facere fugiat iure, totam ullam vero? At doloribus ducimus eveniet fugiat labore sit unde, voluptatem.',
         createdAt: '2021/12/10 13:13',
-        image: `${PostImage}`,
+        image: `${StockExchange}`,
         author: 'Admin',
         readTime: '6 min'
     },
@@ -107,7 +110,7 @@ export const blogPosts = [
         content4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam blanditiis eveniet ipsa porro! Aliquam aliquid aut consequuntur explicabo fugiat natus, neque nihil nulla, pariatur perferendis quisquam totam vitae! Aperiam cumque dolores harum id illum, iste labore laudantium minima neque nulla perferendis perspiciatis quis tempore voluptatem voluptatibus? Quis, sed, ullam. Aliquam architecto at atque beatae corporis cum cumque dicta distinctio dolor dolores dolorum ducimus eos eum illum itaque libero magnam nam necessitatibus, nihil non numquam obcaecati omnis placeat provident quae quaerat quod recusandae reiciendis rerum sit tempora veniam voluptate voluptatibus. Accusantium asperiores aspernatur cum deserunt dignissimos distinctio dolore dolores ex fugiat laboriosam maiores maxime natus nemo nisi omnis pariatur quidem, quos repudiandae suscipit tempore. Architecto asperiores, consequuntur expedita ipsa laudantium magnam minus molestias placeat quae quam quasi repellat similique tempore unde velit. Ad alias animi blanditiis consequuntur culpa cumque debitis delectus dolores eligendi et eveniet explicabo facilis fugiat ipsam itaque labore, laborum, laudantium magnam maiores maxime minus modi nesciunt nisi nostrum perspiciatis quae qui quo quod repellat repudiandae rerum sequi sint sit sunt ullam voluptas voluptate? Commodi dignissimos fugit nam officia provident sequi, sint. Ad dicta ea eum laudantium nihil pariatur quas suscipit ut? Adipisci fuga ipsa odio perferendis temporibus.',
         preview: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque doloribus enim facere fugiat iure, totam ullam vero? At doloribus ducimus eveniet fugiat labore sit unde, voluptatem.',
         createdAt: '2021/10/14 15:50',
-        image: `${PostImage}`,
+        image: `${StockExchange2}`,
         author: 'Jessie',
         readTime: '10 min'
     },
@@ -124,7 +127,7 @@ export const blogPosts = [
         content4: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam blanditiis eveniet ipsa porro! Aliquam aliquid aut consequuntur explicabo fugiat natus, neque nihil nulla, pariatur perferendis quisquam totam vitae! Aperiam cumque dolores harum id illum, iste labore laudantium minima neque nulla perferendis perspiciatis quis tempore voluptatem voluptatibus? Quis, sed, ullam. Aliquam architecto at atque beatae corporis cum cumque dicta distinctio dolor dolores dolorum ducimus eos eum illum itaque libero magnam nam necessitatibus, nihil non numquam obcaecati omnis placeat provident quae quaerat quod recusandae reiciendis rerum sit tempora veniam voluptate voluptatibus. Accusantium asperiores aspernatur cum deserunt dignissimos distinctio dolore dolores ex fugiat laboriosam maiores maxime natus nemo nisi omnis pariatur quidem, quos repudiandae suscipit tempore. Architecto asperiores, consequuntur expedita ipsa laudantium magnam minus molestias placeat quae quam quasi repellat similique tempore unde velit. Ad alias animi blanditiis consequuntur culpa cumque debitis delectus dolores eligendi et eveniet explicabo facilis fugiat ipsam itaque labore, laborum, laudantium magnam maiores maxime minus modi nesciunt nisi nostrum perspiciatis quae qui quo quod repellat repudiandae rerum sequi sint sit sunt ullam voluptas voluptate? Commodi dignissimos fugit nam officia provident sequi, sint. Ad dicta ea eum laudantium nihil pariatur quas suscipit ut? Adipisci fuga ipsa odio perferendis temporibus.',
         preview: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque doloribus enim facere fugiat iure, totam ullam vero? At doloribus ducimus eveniet fugiat labore sit unde, voluptatem.',
         createdAt: '2021/10/16 19:00',
-        image: `${PostImage}`,
+        image: `${StockExchange3}`,
         author: 'Callum',
         readTime: '4 min'
     }
