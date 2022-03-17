@@ -16,7 +16,7 @@ const Menu = ({ hideMenu }) => {
                         <img src={LogoLight} alt="" className="logo2" onClick={hideMenu} />
                     </div><hr />
                     <li>
-                        <a href="" onClick={hideMenu}>
+                        <a href="">
                             <h1>About</h1>
                         </a>
                     </li>

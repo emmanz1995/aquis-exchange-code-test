@@ -5,7 +5,7 @@ import AquisLogoLight from '../../assets/logoLight.svg';
 import Hamburger from '../../assets/icons/hamburger-menu.svg';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ revealMenu, toggle }) => {
+const Navbar = ({ revealMenu }) => {
     const navigate = useNavigate();
     const [revealNav, setRevealNav] = useState(false);
     const navTransition = () => {
@@ -49,7 +49,7 @@ const Navbar = ({ revealMenu, toggle }) => {
                     {!revealNav ? <img src={AquisLogo} alt="" width="600" height="400" className="logo" onClick={() => navigate('/')} /> : <img src={AquisLogoLight} alt="" width="600" height="400" className="logo" onClick={() => navigate('/')} />}
                 </div>
                 <div className="hamburger-container">
-                    <img src={Hamburger} alt="" className="logo" onClick={toggle} />
+                    <img src={Hamburger} alt="" className="logo" onClick={revealMenu} />
                 </div>
                 <ul className="navbar__ul">
                     {navItems.map(nav => (
