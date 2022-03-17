@@ -48,3 +48,10 @@
     flex-direction: column;
   }
 }
+
+@include tablet() {
+  .blog {
+    display: flex;
+    flex-direction: column;
+  }
+}

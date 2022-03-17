@@ -5,3 +5,9 @@
     @content;
   }
 }
+
+@mixin tablet() {
+  @media screen and (max-width: $TabletView) {
+    @content;
+  }
+}

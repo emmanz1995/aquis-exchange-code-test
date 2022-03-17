@@ -24,6 +24,21 @@
   }
 }
 
+@include tablet() {
+  .about {
+    display: flex;
+    flex-direction: column;
+    &__image__container {
+      width: 100%;
+      padding: 10px;
+    }
+    &__info {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
+
 @include mobile() {
   .about {
     display: flex;

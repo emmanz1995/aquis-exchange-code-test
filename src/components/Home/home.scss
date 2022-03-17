@@ -93,7 +93,6 @@
   padding: 10px;
   &__card__container {
     display: flex;
-    //gap: 15px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -175,6 +174,25 @@
       &__input {
         width: 100%;
       }
+    }
+  }
+  .card-header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include tablet() {
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    &__cardInfo {
+      width: 100%;
+      padding: 10px;
+    }
+    &__cardJoin {
+      width: 100%;
+      padding: 10px;
     }
   }
 }

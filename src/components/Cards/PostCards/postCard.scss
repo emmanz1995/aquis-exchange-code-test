@@ -43,3 +43,10 @@
     padding: 10px;
   }
 }
+
+@include tablet() {
+  .postCard {
+    width: 100%;
+    padding: 10px;
+  }
+}
