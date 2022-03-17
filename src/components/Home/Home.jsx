@@ -52,7 +52,7 @@ const Home = () => {
                     </div><br />
                     <div className="add-container">
                         <button className="add-btn">Add Portfolio</button>
-                    </div><br/>
+                    </div>
                 </div>
             </div>
             <div className="tradingContainer">
