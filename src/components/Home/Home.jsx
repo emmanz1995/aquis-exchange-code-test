@@ -48,7 +48,7 @@ const Home = () => {
                 <div className="cardContainer__cardJoin">
                     <h2>Want to Trade?</h2>
                     <div className="button-container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eos fugit mollitia odio optio sapiente?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi architecto, commodi culpa cumque eius est excepturi iure pariatur quae quam, reprehenderit, tempore vitae!</p>
                     </div><br />
                     <div className="add-container">
                         <button className="add-btn">Add Portfolio</button>
