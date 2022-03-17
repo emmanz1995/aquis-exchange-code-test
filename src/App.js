@@ -3,8 +3,9 @@ import './scss/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Post from './components/Blog/Post';
-import Navbar from "./components/Navbar/Navbar";
-import Menu from "./components/Menu/Menu";
+import Navbar from './components/Navbar/Navbar';
+import Menu from './components/Menu/Menu';
+import Footer from './components/Footer/Footer';
 
 function App() {
     const [showMenu, setShowMenu] = useState(false);
@@ -18,6 +19,9 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/post/:title' element={<Post />} />
       </Routes>
+        <div style={{ marginTop: '20px', width: '100%' }}>
+            <Footer />
+        </div>
     </div>
   );
 }

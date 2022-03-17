@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../Navbar/Navbar';
 import './home.scss';
 import Medium from '../../assets/AXS+Logo_4C_72.png';
 import { data } from '../../Data';
 import Graph from '../Graph/Graph';
-import Menu from '../Menu/Menu';
 import About from '../About/About';
-import Blog from "../Blog/Blog";
+import Blog from '../Blog/Blog';
 
 const Home = () => {
     const [stockData, setStockData] = useState([])
@@ -30,8 +28,6 @@ const Home = () => {
 
     return (
         <div className="home">
-            {/*<Navbar revealMenu={revealMenu} />*/}
-            {/*{showMenu && <Menu hideMenu={hideMenu} />}*/}
             <div className="cardContainer">
                 <div className="cardContainer__cardInfo">
                     <div className="icon-container">
@@ -41,7 +37,7 @@ const Home = () => {
                         <span>
                             <h2>AQRU PLC</h2>
                         </span>
-                        <span >
+                        <span>
                             <p>AQSE Growth Market</p>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px'}}>
                                 <p>67.89</p> <p>+1.5%</p>
@@ -58,7 +54,6 @@ const Home = () => {
                     <div className="add-container">
                         <button className="add-btn">Add Portfolio</button>
                     </div>
-                    <div className="icon-container"></div>
                 </div>
             </div>
             <div className="tradingContainer">

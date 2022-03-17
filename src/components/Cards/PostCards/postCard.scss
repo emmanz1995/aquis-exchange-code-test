@@ -19,12 +19,13 @@
 
 .btn-more {
   padding: 5px 15px;
-  border: 1px solid $Gray;
+  border: 2px solid $Dark;
   border-radius: 5px;
   cursor: pointer;
   &:hover {
     transition: all 0.2s ease-in-out;
-    background-color: $Gray;
+    background-color: $Dark;
+    color: $Light;
   }
 }
 

@@ -1,4 +1,57 @@
 @use '../../scss/partial/variable' as *;
 @use '../../scss/partial/mixins' as *;
 
-.footer {}
+.footer {
+  background-color: $Dark;
+  padding: 20px;
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    hr {
+      display: none;
+    }
+  }
+  &__links {
+    color: $Light;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        margin: 10px 0;
+      }
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: $Light;
+      }
+    }
+  }
+  &__copyright {
+    margin-top: 20px;
+    p {
+      color: $Light;
+      a {
+        color: $Light;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    hr {
+      display: block;
+    }
+  }
+  .footer__copyright {
+    text-align: center;
+  }
+}

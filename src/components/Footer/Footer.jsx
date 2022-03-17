@@ -1,10 +1,54 @@
 import React from 'react';
 import './footer.scss';
+import { blogPosts } from '../../Data';
 
 const Footer = ({}) => {
     return (
         <div className="footer">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam blanditiis eveniet ipsa porro! Aliquam aliquid aut consequuntur explicabo fugiat natus, neque nihil nulla, pariatur perferendis quisquam totam vitae! Aperiam cumque dolores harum id illum, iste labore laudantium minima neque nulla perferendis perspiciatis quis tempore voluptatem voluptatibus? Quis, sed, ullam. Aliquam architecto at atque beatae corporis cum cumque dicta distinctio dolor dolores dolorum ducimus eos eum illum itaque libero magnam nam necessitatibus, nihil non numquam obcaecati omnis placeat provident quae quaerat quod recusandae reiciendis rerum sit tempora veniam voluptate voluptatibus. Accusantium asperiores aspernatur cum deserunt dignissimos distinctio dolore dolores ex fugiat laboriosam maiores maxime natus nemo nisi omnis pariatur quidem, quos repudiandae suscipit tempore. Architecto asperiores, consequuntur expedita ipsa laudantium magnam minus molestias placeat quae quam quasi repellat similique tempore unde velit. Ad alias animi blanditiis consequuntur culpa cumque debitis delectus dolores eligendi et eveniet explicabo facilis fugiat ipsam itaque labore, laborum, laudantium magnam maiores maxime minus modi nesciunt nisi nostrum perspiciatis quae qui quo quod repellat repudiandae rerum sequi sint sit sunt ullam voluptas voluptate? Commodi dignissimos fugit nam officia provident sequi, sint. Ad dicta ea eum laudantium nihil pariatur quas suscipit ut? Adipisci fuga ipsa odio perferendis temporibus.
+            <div className="footer__wrapper">
+                <div className="footer__links">
+                    <h2>Navigate</h2>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="">Aquis Exchange</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Investors</a></li>
+                    </ul>
+                </div><hr />
+                <div className="footer__links">
+                    <h2>Content</h2>
+                    <ul>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Register</a></li>
+                        <li><a href="">Videos</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </div><hr />
+                <div className="footer__links">
+                    <h2>Articles</h2>
+                    {blogPosts.map(posts => (
+                        <ul key={posts?.title}>
+                            <li><a href={`/post/${posts?.title}`}>{posts?.title}</a></li>
+                        </ul>
+                    ))}
+                </div><hr />
+                <div className="footer__links">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Offical Website</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Email</a></li>
+                    </ul>
+                </div>
+            </div><hr />
+            <div style={{ maxWidth: '1200px', margin: '0px auto' }}>
+                <div className="footer__copyright">
+                    <p>This is a redesign of an existing website, I claim no rights to the images and icons used in this website.</p>
+                    <p>Designed by <a href="https://github.com/EmmanuelOkuchukwu">emmanz95</a> &copy; {new Date().getFullYear()}</p>
+                </div>
+            </div>
+
         </div>
     );
 }

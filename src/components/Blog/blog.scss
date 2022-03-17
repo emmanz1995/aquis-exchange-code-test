@@ -14,6 +14,14 @@
 .post {
   max-width: 1200px;
   margin: 70px auto;
+  &__header {
+    h1 {
+      color: $Dark;
+    }
+    p {
+      color: $Dark;
+    }
+  }
   &__imageContainer {
     width: 100%;
   }
@@ -22,6 +30,9 @@
   }
   &__body {
     text-align: justify;
+    .post-subheading, .post-text {
+      color: $Dark;
+    }
   }
 }
 .post-info {

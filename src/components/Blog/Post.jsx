@@ -22,20 +22,20 @@ const Post = () => {
             </div><br />
             <div className="post__body">
                 <span>
-                    <h3>{post?.subHeading1}</h3>
-                    <p>{post?.content1}</p>
+                    <h3 className="post-subheading">{post?.subHeading1}</h3>
+                    <p className="post-text">{post?.content1}</p>
                 </span><br/>
                 <span>
-                    <h3>{post?.subHeading2}</h3>
-                    <p>{post?.content2}</p>
+                    <h3 className="post-subheading">{post?.subHeading2}</h3>
+                    <p className="post-text">{post?.content2}</p>
                 </span><br/>
                 <span>
-                    <h3>{post?.subHeading3}</h3>
-                    <p>{post?.content3}</p>
+                    <h3 className="post-subheading">{post?.subHeading3}</h3>
+                    <p className="post-text">{post?.content3}</p>
                 </span><br/>
                 <span>
-                    <h3>{post?.subHeading4}</h3>
-                    <p>{post?.content4}</p>
+                    <h3 className="post-subheading">{post?.subHeading4}</h3>
+                    <p className="post-text">{post?.content4}</p>
                 </span>
             </div>
         </div>
