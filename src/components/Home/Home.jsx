@@ -14,15 +14,16 @@ const Home = () => {
     }, [])
 
     const filterStock = (evt) => {
-        const keyword = evt.target.value
+        const keyword = evt.target.value.toLowerCase()
         setSearchStock(keyword)
     }
 
     const stocks = stockData?.stockData?.filter((stock) => {
-        if(searchStock == null)
-            return stock
-        else if(stock?.name?.toLowerCase().includes(searchStock.toLowerCase()) || stock?.name?.toLowerCase().includes(searchStock.toLowerCase())) {
+        if(searchStock === '') {
             return stock;
+        } else {
+            const result = stock?.name.toLowerCase();
+            return result.includes(searchStock);
         }
     })
 
@@ -64,35 +65,17 @@ const Home = () => {
                 </div>
                 <hr />
                 <div style={{ display: 'flex', gap: '15px' }} className="tradingContainer__card__container">
-                    {stocks ? (
-                        <>
-                            {stocks.map(stock => (
-                                <div className="tradingContainer__card" key={stock?.id}>
-                                    <div className="card-header">
-                                        <h5>{stock.code}</h5>
-                                        <p>{stock?.price}</p>
-                                    </div><br/>
-                                    <div className="card-body">
-                                        <p>{stock.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </>
-                    ) : (
-                        <>
-                            {stockData?.stockData?.map(stock => (
-                                <div className="tradingContainer__card" key={stock?.id}>
-                                    <div className="card-header">
-                                        <h5>{stock.code}</h5>
-                                        <p>{stock?.price}</p>
-                                    </div><br/>
-                                    <div className="card-body">
-                                        <p>{stock.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </>
-                    )}
+                    {stocks?.length > 0 ? stocks?.map(stock => (
+                        <div className="tradingContainer__card" key={stock?.id}>
+                            <div className="card-header">
+                                <h5>{stock.code}</h5>
+                                <p>{stock?.price}</p>
+                            </div><br/>
+                            <div className="card-body">
+                                <p>{stock.name}</p>
+                            </div>
+                        </div>
+                    )): <p>There are no stocks found with that letter sorry!</p>}
                 </div>
             </div>
             <div className="graphContainer">
