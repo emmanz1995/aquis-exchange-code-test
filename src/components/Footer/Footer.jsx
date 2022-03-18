@@ -35,10 +35,10 @@ const Footer = ({}) => {
                 <div className="footer__links">
                     <h2>Contact</h2>
                     <ul>
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">Offical Website</a></li>
-                        <li><a href="">Twitter</a></li>
-                        <li><a href="">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/emmanuel-okuchukwu-677011b4/">LinkedIn</a></li>
+                        <li><a href="https://emmanuel-okuchukwu.netlify.app/">Website</a></li>
+                        <li><a href="https://twitter.com/emmanza2">Twitter</a></li>
+                        <li><a href="mailto:emmanza2@gmail.com">Email</a></li>
                     </ul>
                 </div>
             </div><hr />
